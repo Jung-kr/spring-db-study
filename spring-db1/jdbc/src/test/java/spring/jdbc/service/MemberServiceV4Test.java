@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import spring.jdbc.domain.Member;
 import spring.jdbc.repository.MemberRepository;
 import spring.jdbc.repository.MemberRepositoryV4_1;
+import spring.jdbc.repository.MemberRepositoryV4_2;
 
 import javax.sql.DataSource;
 
@@ -49,12 +50,11 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-
-            return new MemberRepositoryV4_1(dataSource);
+//            return new MemberRepositoryV4_1(dataSource);
+            return new MemberRepositoryV4_2(dataSource);
         }
         @Bean
         MemberServiceV4 memberServiceV4() {
-
             return new MemberServiceV4(memberRepository());
         }
     }
