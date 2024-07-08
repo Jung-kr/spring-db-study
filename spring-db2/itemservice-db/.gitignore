@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Querydsl Q타입 ###
+/src/main/generated/
